@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ev2.MainPage">
+    <StackLayout Padding="20">
+
+        <!-- Entrada de Número Telefónico -->
+        <Entry x:Name="XX_entryPhoneNumber" Placeholder="Ingrese su número telefónico" Keyboard="Telephone" />
+
+        <!-- Selector de Operador -->
+        <Picker x:Name="XX_pickerOperator" Title="Seleccione su operador">
+            <Picker.Items>
+                <x:String>Movistar</x:String>
+                <x:String>Claro</x:String>
+                <x:String>CNT</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!-- Opciones de Recarga -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <RadioButton x:Name="XX_rb3" Content="$3 dólares" GroupName="Recarga" CheckedChanged="OnCheckedChanged"/>
+            <RadioButton x:Name="XX_rb5" Content="$5 dólares" GroupName="Recarga" CheckedChanged="OnCheckedChanged"/>
+            <RadioButton x:Name="XX_rb10" Content="$10 dólares" GroupName="Recarga" CheckedChanged="OnCheckedChanged"/>
+        </StackLayout>
+
+        <!-- Botón de Recarga -->
+        <Button x:Name="XX_btnRecharge" Text="Realizar Recarga" Clicked="OnRechargeClicked"/>
+    </StackLayout>
+</ContentPage>
